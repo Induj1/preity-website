@@ -40,7 +40,7 @@ const HeroSection = () => {
           className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 sm:mb-6 leading-tight gradient-text px-2"
           variants={itemVariants}
         >
-          Induj Gupta
+          Preity Baney
         </motion.h1>
         
         <motion.p 
