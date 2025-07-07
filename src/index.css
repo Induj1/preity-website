@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables for Preity's Brand */
+@layer base {
+  :root {
+    --background: 252 250 247; /* Ivory */
+    --foreground: 26 26 26; /* Deep Charcoal */
+
+    --card: 252 250 247;
+    --card-foreground: 26 26 26;
+
+    --popover: 252 250 247;
+    --popover-foreground: 26 26 26;
+
+    --primary: 212 175 55; /* Gold */
+    --primary-foreground: 252 250 247;
+
+    --secondary: 251 231 231; /* Blush */
+    --secondary-foreground: 26 26 26;
+
+    --muted: 251 231 231;
+    --muted-foreground: 115 115 115;
+
+    --accent: 165 80 167; /* Violet */
+    --accent-foreground: 252 250 247;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 251 231 231;
+    --input: 251 231 231;
+    --ring: 212 175 55;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 26 26 26;
+    --foreground: 252 250 247;
+
+    --card: 40 40 40;
+    --card-foreground: 252 250 247;
+
+    --popover: 40 40 40;
+    --popover-foreground: 252 250 247;
+
+    --primary: 212 175 55;
+    --primary-foreground: 26 26 26;
+
+    --secondary: 60 50 50;
+    --secondary-foreground: 252 250 247;
+
+    --muted: 60 50 50;
+    --muted-foreground: 165 165 165;
+
+    --accent: 165 80 167;
+    --accent-foreground: 252 250 247;
+
+    --border: 60 50 50;
+    --input: 60 50 50;
+    --ring: 212 175 55;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient text utilities */
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-gold to-violet bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(252, 250, 247, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+}
