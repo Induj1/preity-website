@@ -25,7 +25,7 @@ const PersonalQuote = () => {
         <blockquote className="text-3xl md:text-4xl font-playfair font-bold text-deep-charcoal mb-6">
           "Like a trampoline, the lower I'm pushed, the higher I rise."
         </blockquote>
-        <p className="text-xl text-gray-600">— Induj Gupta</p>
+        <p className="text-xl text-gray-600">— Preity Baney</p>
       </motion.div>
     </section>
   );
